@@ -1,9 +1,8 @@
 import { Directive, ElementRef, forwardRef, HostListener, Inject, NgModule } from '@angular/core';
 import { FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { registerElement } from '@nativescript/angular';
-import { BaseValueAccessor } from '@nativescript/angular/forms/value-accessors';
+import { registerElement, BaseValueAccessor } from '@nativescript/angular';
 import { View } from '@nativescript/core';
-import { CheckBox } from '../index';
+import { CheckBox } from '@qlip/checkbox';
 
 registerElement('Checkbox', () => CheckBox);
 

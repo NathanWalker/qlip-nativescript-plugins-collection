@@ -1,5 +1,5 @@
 import { Application, booleanConverter, Color, CssProperty, Device, Property, Style, View } from '@nativescript/core';
-import { BoxType } from './checkbox-common';
+import { BoxType } from './common';
 
 declare const global: any;
 
@@ -72,7 +72,7 @@ export class CheckBox extends View {
 		super();
 	}
 
-	get android() {
+	get androidP() {
 		return this._android;
 	}
 
@@ -175,7 +175,7 @@ export class CheckBox extends View {
 	createNativeView() {
 		this._android = new AppCompatCheckBox_Namespace[BoxType[this.boxType] === BoxType.circle ? 'AppCompatRadioButton' : 'AppCompatCheckBox'](this._context, null);
 		// assign to the nativeView member
-		this.nativeView = this.android;
+		this.nativeView = this.androidP;
 
 		if (this.checkPaddingLeft) {
 			this._android.setPadding(parseInt(this.checkPaddingLeft), this._android.getPaddingTop(), this._android.getPaddingRight(), this._android.getPaddingBottom());

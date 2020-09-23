@@ -73,7 +73,7 @@
 					"builder": "@nrwl/workspace:run-commands",
 					"outputs": ["dist/packages"],
 					"options": {
-						"commands": [],
+						"commands": ["nx run checkbox:build.all"],
 						"parallel": false
 					}
 				},
@@ -82,6 +82,49 @@
 					"outputs": ["dist/packages"],
 					"options": {
 						"commands": ["nx g @nativescript/plugin-tools:focus-packages"],
+						"parallel": false
+					}
+				}
+			}
+		},
+		"checkbox": {
+			"root": "packages/checkbox",
+			"sourceRoot": "packages/checkbox",
+			"projectType": "library",
+			"schematics": {},
+			"architect": {
+				"build": {
+					"builder": "@nrwl/node:package",
+					"options": {
+						"outputPath": "dist/packages/checkbox",
+						"tsConfig": "packages/checkbox/tsconfig.json",
+						"packageJson": "packages/checkbox/package.json",
+						"main": "packages/checkbox/index.ts",
+						"assets": [
+							"packages/checkbox/*.md",
+							"packages/checkbox/index.d.ts",
+							"LICENSE",
+							{
+								"glob": "**/*",
+								"input": "packages/checkbox/platforms/",
+								"output": "./platforms/"
+							}
+						]
+					}
+				},
+				"build.all": {
+					"builder": "@nrwl/workspace:run-commands",
+					"outputs": ["dist/packages"],
+					"options": {
+						"commands": ["nx run checkbox:build", "node tools/scripts/build-finish.ts checkbox"],
+						"parallel": false
+					}
+				},
+				"focus": {
+					"builder": "@nrwl/workspace:run-commands",
+					"outputs": ["dist/packages"],
+					"options": {
+						"commands": ["nx g @nativescript/plugin-tools:focus-packages checkbox"],
 						"parallel": false
 					}
 				}

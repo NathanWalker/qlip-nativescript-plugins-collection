@@ -1,0 +1,13 @@
+# Nativescript checkbox
+
+```javascript
+ns plugin add @qlip/checkbox
+```
+
+## Usage
+
+// TODO
+
+## License
+
+Apache License Version 2.0

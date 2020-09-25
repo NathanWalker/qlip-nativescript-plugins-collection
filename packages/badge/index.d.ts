@@ -1,3 +1,4 @@
-import { BadgeCommon } from './common';
-
-export declare class Badge extends BadgeCommon {}
+export interface Notification {
+	title: string;
+	body: string;
+}

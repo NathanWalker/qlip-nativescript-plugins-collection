@@ -73,7 +73,7 @@
 					"builder": "@nrwl/workspace:run-commands",
 					"outputs": ["dist/packages"],
 					"options": {
-						"commands": ["nx run checkbox:build.all"],
+						"commands": ["nx run checkbox:build.all", "nx run badge:build.all"],
 						"parallel": false
 					}
 				},
@@ -125,6 +125,49 @@
 					"outputs": ["dist/packages"],
 					"options": {
 						"commands": ["nx g @nativescript/plugin-tools:focus-packages checkbox"],
+						"parallel": false
+					}
+				}
+			}
+		},
+		"badge": {
+			"root": "packages/badge",
+			"sourceRoot": "packages/badge",
+			"projectType": "library",
+			"schematics": {},
+			"architect": {
+				"build": {
+					"builder": "@nrwl/node:package",
+					"options": {
+						"outputPath": "dist/packages/badge",
+						"tsConfig": "packages/badge/tsconfig.json",
+						"packageJson": "packages/badge/package.json",
+						"main": "packages/badge/index.ts",
+						"assets": [
+							"packages/badge/*.md",
+							"packages/badge/index.d.ts",
+							"LICENSE",
+							{
+								"glob": "**/*",
+								"input": "packages/badge/platforms/",
+								"output": "./platforms/"
+							}
+						]
+					}
+				},
+				"build.all": {
+					"builder": "@nrwl/workspace:run-commands",
+					"outputs": ["dist/packages"],
+					"options": {
+						"commands": ["nx run badge:build", "node tools/scripts/build-finish.ts badge"],
+						"parallel": false
+					}
+				},
+				"focus": {
+					"builder": "@nrwl/workspace:run-commands",
+					"outputs": ["dist/packages"],
+					"options": {
+						"commands": ["nx g @nativescript/plugin-tools:focus-packages badge"],
 						"parallel": false
 					}
 				}

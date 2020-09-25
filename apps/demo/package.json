@@ -6,7 +6,8 @@
 	"dependencies": {
 		"nativescript-theme-core": "file:../../node_modules/nativescript-theme-core",
 		"@nativescript/core": "file:../../node_modules/@nativescript/core",
-		"@qlip/checkbox": "file:../../packages/checkbox"
+		"@qlip/checkbox": "file:../../packages/checkbox",
+		"@qlip/badge": "file:../../packages/badge"
 	},
 	"devDependencies": {
 		"@nativescript/android": "~7.0.0",

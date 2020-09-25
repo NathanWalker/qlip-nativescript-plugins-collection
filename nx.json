@@ -25,6 +25,9 @@
 		},
 		"checkbox": {
 			"tags": []
+		},
+		"badge": {
+			"tags": []
 		}
 	},
 	"workspaceLayout": {

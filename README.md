@@ -5,6 +5,7 @@ npm run setup
 npm start
 ```
 
+- @qlip/badge
 - @qlip/checkbox
 
 # How to use?

@@ -7,6 +7,7 @@ import { HomeComponent } from './home.component';
 const routes: Routes = [
 	{ path: '', redirectTo: '/home', pathMatch: 'full' },
 	{ path: 'home', component: HomeComponent },
+	{ path: 'badge', loadChildren: () => import('./plugin-demos/badge.module').then((m) => m.BadgeModule) },
 	{ path: 'checkbox', loadChildren: () => import('./plugin-demos/checkbox.module').then((m) => m.CheckboxModule) },
 ];
 

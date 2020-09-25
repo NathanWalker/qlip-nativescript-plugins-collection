@@ -70,6 +70,13 @@ module.exports = {
 					description: '@qlip/checkbox: Build',
 				},
 			},
+			// @qlip/badge
+			badge: {
+				build: {
+					script: 'nx run badge:build.all',
+					description: '@qlip/badge: Build',
+				},
+			},
 			'build-all': {
 				script: 'nx run all:build',
 				description: 'Build all packages',
@@ -83,6 +90,10 @@ module.exports = {
 			checkbox: {
 				script: 'nx run checkbox:focus',
 				description: 'Focus on @qlip/checkbox',
+			},
+			badge: {
+				script: 'nx run badge:focus',
+				description: 'Focus on @qlip/badge',
 			},
 			reset: {
 				script: 'nx run all:focus',

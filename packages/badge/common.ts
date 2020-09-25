@@ -1,3 +1,4 @@
-import { Observable } from '@nativescript/core';
-
-export class BadgeCommon extends Observable {}
+export interface Notification {
+	title: string;
+	body: string;
+}

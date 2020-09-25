@@ -1,5 +1,5 @@
-import { Notification } from './index';
 import { Device } from '@nativescript/core';
+import { Notification } from './common';
 
 const sdkVersion = parseFloat(Device.sdkVersion);
 

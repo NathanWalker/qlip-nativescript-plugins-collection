@@ -1,5 +1,5 @@
 import { Utils } from '@nativescript/core';
-import { Notification } from './index';
+import { Notification } from './common';
 
 const ShortcutBadger = me.leolin.shortcutbadger.ShortcutBadger;
 

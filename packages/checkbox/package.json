@@ -10,10 +10,6 @@
       "android": "6.0.0"
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/NativeScript/plugins.git"
-  },
   "keywords": [
     "NativeScript",
     "JavaScript",
@@ -22,14 +18,10 @@
     "Android"
   ],
   "author": {
-    "name": "NativeScript",
-    "email": "oss@nativescript.org"
-  },
-  "bugs": {
-    "url": "https://github.com/NativeScript/plugins/issues"
+    "name": "Qlip",
+    "email": "meijerj@qlip.nl"
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/NativeScript/plugins",
   "readmeFilename": "README.md",
   "bootstrapper": "@nativescript/plugin-seed"
 }

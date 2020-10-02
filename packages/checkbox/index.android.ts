@@ -41,21 +41,6 @@ export const tintColorProperty = new CssProperty<Style, string>({
 	},
 });
 
-export const fontSizeProperty = new CssProperty<Style, number>({
-	name: 'fontSize',
-	cssName: 'font-size',
-	defaultValue: 14,
-	valueConverter: (v) => {
-		const x = parseFloat(v);
-		if (x < 0) {
-			throw new Error(`font-size accepts values greater than 0. Value: ${v}`);
-		}
-
-		return x;
-	},
-});
-fontSizeProperty.register(Style);
-
 export class CheckBox extends View {
 	checked: boolean;
 	nativeView: androidx.appcompat.widget.AppCompatCheckBox;
@@ -144,13 +129,6 @@ export class CheckBox extends View {
 		this.nativeView.setText(java.lang.String.valueOf(value));
 	}
 
-	[fontSizeProperty.getDefault](): number {
-		return 14;
-	}
-	[fontSizeProperty.setNative](value: number) {
-		this.nativeView.setTextSize(value);
-	}
-
 	get fillColor(): string {
 		return (<any>this.style).fillColor;
 	}
@@ -213,10 +191,6 @@ export class CheckBox extends View {
 
 		if (this.style.color) {
 			this._android.setTextColor(this.style.color.android);
-		}
-
-		if (!this.style.fontSize) {
-			this.style.fontSize = 14;
 		}
 
 		this._android.setTextSize(this.style.fontSize);

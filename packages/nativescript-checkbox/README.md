@@ -1,7 +1,7 @@
 # Nativescript checkbox
 
 ```javascript
-ns plugin add @qlip/checkbox
+ns plugin add @qlip/nativescript-checkbox
 ```
 
 ## Usage

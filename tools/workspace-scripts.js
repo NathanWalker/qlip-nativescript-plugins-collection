@@ -63,18 +63,18 @@ module.exports = {
 		// packages
 		// build output is always in dist/packages
 		'@qlip': {
-			// @qlip/checkbox
+			// @qlip/nativescript-checkbox
 			checkbox: {
 				build: {
-					script: 'nx run checkbox:build.all',
-					description: '@qlip/checkbox: Build',
+					script: 'nx run nativescript-checkbox:build.all',
+					description: '@qlip/nativescript-checkbox: Build',
 				},
 			},
 			// @qlip/badge
 			badge: {
 				build: {
-					script: 'nx run badge:build.all',
-					description: '@qlip/badge: Build',
+					script: 'nx run nativescript-badge:build.all',
+					description: '@qlip/nativescript-badge: Build',
 				},
 			},
 			'build-all': {
@@ -88,12 +88,12 @@ module.exports = {
 		},
 		focus: {
 			checkbox: {
-				script: 'nx run checkbox:focus',
-				description: 'Focus on @qlip/checkbox',
+				script: 'nx run nativescript-checkbox:focus',
+				description: 'Focus on @qlip/nativescript-checkbox',
 			},
 			badge: {
-				script: 'nx run badge:focus',
-				description: 'Focus on @qlip/badge',
+				script: 'nx run nativescript-badge:focus',
+				description: 'Focus on @qlip/nativescript-badge',
 			},
 			reset: {
 				script: 'nx run all:focus',

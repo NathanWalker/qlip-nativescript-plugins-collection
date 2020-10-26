@@ -66,14 +66,14 @@
 			}
 		},
 		"all": {
-			"root": "packages",
+			"root": "packages/",
 			"projectType": "library",
 			"architect": {
 				"build": {
 					"builder": "@nrwl/workspace:run-commands",
 					"outputs": ["dist/packages"],
 					"options": {
-						"commands": ["nx run checkbox:build.all", "nx run badge:build.all"],
+						"commands": ["nx run nativescript-checkbox:build.all", "nx run nativescript-badge:build.all"],
 						"parallel": false
 					}
 				},
@@ -87,26 +87,26 @@
 				}
 			}
 		},
-		"checkbox": {
-			"root": "packages/checkbox",
-			"sourceRoot": "packages/checkbox",
+		"nativescript-checkbox": {
+			"root": "packages/nativescript-checkbox",
+			"sourceRoot": "packages/nativescript-checkbox",
 			"projectType": "library",
 			"schematics": {},
 			"architect": {
 				"build": {
 					"builder": "@nrwl/node:package",
 					"options": {
-						"outputPath": "dist/packages/checkbox",
-						"tsConfig": "packages/checkbox/tsconfig.json",
-						"packageJson": "packages/checkbox/package.json",
-						"main": "packages/checkbox/index.ts",
+						"outputPath": "dist/packages/nativescript-checkbox",
+						"tsConfig": "packages/nativescript-checkbox/tsconfig.json",
+						"packageJson": "packages/nativescript-checkbox/package.json",
+						"main": "packages/nativescript-checkbox/index.ts",
 						"assets": [
-							"packages/checkbox/*.md",
-							"packages/checkbox/index.d.ts",
+							"packages/nativescript-checkbox/*.md",
+							"packages/nativescript-checkbox/index.d.ts",
 							"LICENSE",
 							{
 								"glob": "**/*",
-								"input": "packages/checkbox/platforms/",
+								"input": "packages/nativescript-checkbox/platforms/",
 								"output": "./platforms/"
 							}
 						]
@@ -116,7 +116,7 @@
 					"builder": "@nrwl/workspace:run-commands",
 					"outputs": ["dist/packages"],
 					"options": {
-						"commands": ["nx run checkbox:build", "node tools/scripts/build-finish.ts checkbox"],
+						"commands": ["nx run nativescript-checkbox:build", "node tools/scripts/build-finish.ts nativescript-checkbox"],
 						"parallel": false
 					}
 				},
@@ -124,32 +124,32 @@
 					"builder": "@nrwl/workspace:run-commands",
 					"outputs": ["dist/packages"],
 					"options": {
-						"commands": ["nx g @nativescript/plugin-tools:focus-packages checkbox"],
+						"commands": ["nx g @nativescript/plugin-tools:focus-packages nativescript-checkbox"],
 						"parallel": false
 					}
 				}
 			}
 		},
-		"badge": {
-			"root": "packages/badge",
-			"sourceRoot": "packages/badge",
+		"nativescript-badge": {
+			"root": "packages/nativescript-badge",
+			"sourceRoot": "packages/nativescript-badge",
 			"projectType": "library",
 			"schematics": {},
 			"architect": {
 				"build": {
 					"builder": "@nrwl/node:package",
 					"options": {
-						"outputPath": "dist/packages/badge",
-						"tsConfig": "packages/badge/tsconfig.json",
-						"packageJson": "packages/badge/package.json",
-						"main": "packages/badge/index.ts",
+						"outputPath": "dist/packages/nativescript-badge",
+						"tsConfig": "packages/nativescript-badge/tsconfig.json",
+						"packageJson": "packages/nativescript-badge/package.json",
+						"main": "packages/nativescript-badge/index.ts",
 						"assets": [
-							"packages/badge/*.md",
-							"packages/badge/index.d.ts",
+							"packages/nativescript-badge/*.md",
+							"packages/nativescript-badge/index.d.ts",
 							"LICENSE",
 							{
 								"glob": "**/*",
-								"input": "packages/badge/platforms/",
+								"input": "packages/nativescript-badge/platforms/",
 								"output": "./platforms/"
 							}
 						]
@@ -159,7 +159,7 @@
 					"builder": "@nrwl/workspace:run-commands",
 					"outputs": ["dist/packages"],
 					"options": {
-						"commands": ["nx run badge:build", "node tools/scripts/build-finish.ts badge"],
+						"commands": ["nx run nativescript-badge:build", "node tools/scripts/build-finish.ts nativescript-badge"],
 						"parallel": false
 					}
 				},
@@ -167,7 +167,7 @@
 					"builder": "@nrwl/workspace:run-commands",
 					"outputs": ["dist/packages"],
 					"options": {
-						"commands": ["nx g @nativescript/plugin-tools:focus-packages badge"],
+						"commands": ["nx g @nativescript/plugin-tools:focus-packages nativescript-badge"],
 						"parallel": false
 					}
 				}

@@ -1,14 +1,14 @@
-import { Directive, ElementRef, forwardRef, HostListener, Inject, NgModule } from '@angular/core';
-import { FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { Directive, ElementRef, forwardRef, HostListener, NgModule } from '@angular/core';
+import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import { registerElement, BaseValueAccessor } from '@nativescript/angular';
 import { View } from '@nativescript/core';
-import { CheckBox } from '@qlip/checkbox';
+import { CheckBox } from '@qlip/nativescript-checkbox';
 
 registerElement('Checkbox', () => CheckBox);
 
-const CHECKED_VALUE_ACCESSOR = {
+const CHECKBOX_VALUE_ACCESSOR = {
 	provide: NG_VALUE_ACCESSOR,
-	useExisting: forwardRef(() => CheckedValueAccessor),
+	useExisting: forwardRef(() => CheckBoxValueAccessor),
 	multi: true,
 };
 
@@ -25,10 +25,10 @@ export type CheckableView = { checked: boolean } & View;
  */
 @Directive({
 	selector: 'CheckBox[ngModel], CheckBox[formControlName], CheckBox[formControl], checkBox[ngModel], checkBox[formControlName], checkBox[formControl], check-box[ngModel], check-box[formControlName], check-box[formControl]',
-	providers: [CHECKED_VALUE_ACCESSOR],
+	providers: [CHECKBOX_VALUE_ACCESSOR],
 })
-export class CheckedValueAccessor extends BaseValueAccessor<CheckableView> {
-	constructor(@Inject(ElementRef) elementRef: ElementRef) {
+export class CheckBoxValueAccessor extends BaseValueAccessor<CheckableView> {
+	constructor(elementRef: ElementRef) {
 		super(elementRef.nativeElement);
 	}
 
@@ -48,9 +48,9 @@ export class CheckedValueAccessor extends BaseValueAccessor<CheckableView> {
 	}
 }
 @NgModule({
-	declarations: [CheckedValueAccessor],
+	declarations: [CheckBoxValueAccessor],
 	providers: [],
-	imports: [FormsModule],
-	exports: [FormsModule, CheckedValueAccessor],
+	imports: [],
+	exports: [CheckBoxValueAccessor],
 })
 export class NativeScriptCheckboxModule {}

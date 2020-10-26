@@ -23,10 +23,10 @@
 		"all": {
 			"tags": []
 		},
-		"checkbox": {
+		"nativescript-checkbox": {
 			"tags": []
 		},
-		"badge": {
+		"nativescript-badge": {
 			"tags": []
 		}
 	},

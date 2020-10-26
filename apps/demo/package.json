@@ -6,13 +6,13 @@
 	"dependencies": {
 		"nativescript-theme-core": "file:../../node_modules/nativescript-theme-core",
 		"@nativescript/core": "file:../../node_modules/@nativescript/core",
-		"@qlip/checkbox": "file:../../packages/checkbox",
-		"@qlip/badge": "file:../../packages/badge"
+		"@qlip/nativescript-checkbox": "file:../../packages/nativescript-checkbox",
+		"@qlip/nativescript-badge": "file:../../packages/nativescript-badge"
 	},
 	"devDependencies": {
-		"@nativescript/android": "~7.0.0",
-		"@nativescript/ios": "7.0.0",
-		"@nativescript/webpack": "3.0.0",
+		"@nativescript/android": "7.0.1",
+		"@nativescript/ios": "7.0.4",
+		"@nativescript/webpack": "~3.0.0",
 		"typescript": "file:../../node_modules/typescript"
 	}
 }

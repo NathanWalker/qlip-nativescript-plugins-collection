@@ -1,13 +1,11 @@
-
 declare class BEMAnimationManager extends NSObject {
-
 	static alloc(): BEMAnimationManager; // inherited from NSObject
 
 	static new(): BEMAnimationManager; // inherited from NSObject
 
 	animationDuration: number;
 
-	constructor(o: { animationDuration: number; });
+	constructor(o: { animationDuration: number });
 
 	fillAnimationWithBouncesAmplitudeReverse(bounces: number, amplitude: number, reverse: boolean): CAKeyframeAnimation;
 
@@ -21,7 +19,6 @@ declare class BEMAnimationManager extends NSObject {
 }
 
 declare const enum BEMAnimationType {
-
 	Stroke = 0,
 
 	Fill = 1,
@@ -32,18 +29,16 @@ declare const enum BEMAnimationType {
 
 	OneStroke = 4,
 
-	Fade = 5
+	Fade = 5,
 }
 
 declare const enum BEMBoxType {
-
 	Circle = 0,
 
-	Square = 1
+	Square = 1,
 }
 
 declare class BEMCheckBox extends UIControl implements CAAnimationDelegate {
-
 	static alloc(): BEMCheckBox; // inherited from NSObject
 
 	static appearance(): BEMCheckBox; // inherited from UIAppearance
@@ -100,7 +95,7 @@ declare class BEMCheckBox extends UIControl implements CAAnimationDelegate {
 
 	readonly superclass: typeof NSObject; // inherited from NSObjectProtocol
 
-	readonly  // inherited from NSObjectProtocol
+	readonly; // inherited from NSObjectProtocol
 
 	animationDidStart(anim: CAAnimation): void;
 
@@ -134,18 +129,15 @@ declare class BEMCheckBox extends UIControl implements CAAnimationDelegate {
 }
 
 interface BEMCheckBoxDelegate extends NSObjectProtocol {
-
 	animationDidStopForCheckBox?(checkBox: BEMCheckBox): void;
 
 	didTapCheckBox?(checkBox: BEMCheckBox): void;
 }
 declare var BEMCheckBoxDelegate: {
-
 	prototype: BEMCheckBoxDelegate;
 };
 
 declare class BEMCheckBoxGroup extends NSObject {
-
 	static alloc(): BEMCheckBoxGroup; // inherited from NSObject
 
 	static groupWithCheckBoxes(checkBoxes: NSArray<BEMCheckBox> | BEMCheckBox[]): BEMCheckBoxGroup;
@@ -168,7 +160,6 @@ declare var BEMCheckBoxVersionNumber: number;
 declare var BEMCheckBoxVersionString: interop.Reference<number>;
 
 declare class BEMPathManager extends NSObject {
-
 	static alloc(): BEMPathManager; // inherited from NSObject
 
 	static new(): BEMPathManager; // inherited from NSObject

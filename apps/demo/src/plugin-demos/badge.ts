@@ -1,6 +1,6 @@
 import { Observable, EventData, Page } from '@nativescript/core';
 import { DemoSharedBadge } from '@demo/shared';
-import {} from '@qlip/badge';
+import {} from '@qlip/nativescript-badge';
 
 export function navigatingTo(args: EventData) {
 	const page = <Page>args.object;

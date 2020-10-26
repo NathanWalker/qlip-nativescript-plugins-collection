@@ -15,13 +15,13 @@
 		"reflect-metadata": "file:../../node_modules/reflect-metadata",
 		"rxjs": "file:../../node_modules/rxjs",
 		"zone.js": "file:../../node_modules/zone.js",
-		"@qlip/checkbox": "file:../../dist/packages/checkbox",
-		"@qlip/badge": "file:../../dist/packages/badge"
+		"@qlip/nativescript-checkbox": "file:../../dist/packages/nativescript-checkbox",
+		"@qlip/nativescript-badge": "file:../../dist/packages/nativescript-badge"
 	},
 	"devDependencies": {
 		"@angular/compiler-cli": "file:../../node_modules/@angular/compiler-cli",
-		"@nativescript/android": "7.0.0",
-		"@nativescript/ios": "7.0.0",
+		"@nativescript/android": "7.0.1",
+		"@nativescript/ios": "7.0.4",
 		"@nativescript/webpack": "~3.0.0",
 		"@ngtools/webpack": "file:../../node_modules/@ngtools/webpack",
 		"typescript": "file:../../node_modules/typescript"

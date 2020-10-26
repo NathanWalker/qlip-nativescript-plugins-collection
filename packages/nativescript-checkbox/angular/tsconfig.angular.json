@@ -4,7 +4,7 @@
 		"types": ["node"],
 		"baseUrl": ".",
 		"paths": {
-			"@qlip/checkbox": ["../../../dist/packages/checkbox"]
+			"@qlip/nativescript-checkbox": ["../../../dist/packages/nativescript-checkbox"]
 		}
 	}
 }

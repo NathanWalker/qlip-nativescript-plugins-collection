@@ -5,8 +5,8 @@ npm run setup
 npm start
 ```
 
-- @qlip/badge
-- @qlip/checkbox
+- @qlip/nativescript-badge
+- @qlip/nativescript-checkbox
 
 # How to use?
 

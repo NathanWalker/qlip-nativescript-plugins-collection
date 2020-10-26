@@ -1,12 +1,12 @@
 {
-	"name": "nativescript-checkbox-angular",
+	"name": "qlip-nativescript-checkbox-angular",
 	"ngPackage": {
 		"lib": {
 			"entryFile": "index.ts",
 			"umdModuleIds": {
 				"@nativescript/core": "ns-core",
 				"@nativescript/angular": "ns-angular",
-				"@nativescript/checkbox": "ns-checkbox"
+				"@qlip/nativescript-checkbox": "qlip-ns-checkbox"
 			}
 		},
 		"whitelistedNonPeerDependencies": [

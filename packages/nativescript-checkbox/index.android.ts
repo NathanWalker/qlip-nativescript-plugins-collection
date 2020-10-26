@@ -1,6 +1,8 @@
 import { Application, booleanConverter, Color, CssProperty, Device, Property, Style, View } from '@nativescript/core';
 import { BoxType } from './common';
 
+export * from './common';
+
 declare const global: any;
 
 const AppCompatCheckBox_Namespace = useAndroidX() ? androidx.appcompat.widget : (android.support as any).v7.widget;

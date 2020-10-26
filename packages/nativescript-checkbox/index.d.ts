@@ -1,5 +1,7 @@
 import { View } from '@nativescript/core';
 
+export * from './common';
+
 /**
  * Represents a CheckBox component.
  */
@@ -22,11 +24,5 @@ export declare class CheckBox extends View {
 	/**
 	 * Change the checked state of the view to the inverse of its current state.
 	 */
-	toggle(): void;
-}
-
-export interface CheckBoxInterface {
-	text?: string;
-	checked: boolean;
 	toggle(): void;
 }

@@ -6,10 +6,7 @@ declare module me {
 				/**
 				 * Constructs a new instance of the me.leolin.shortcutbadger.Badger interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 				 */
-				public constructor(implementation: {
-					executeBadge(param0: globalAndroid.content.Context, param1: globalAndroid.content.ComponentName, param2: number): void;
-					getSupportLaunchers(): java.util.List<string>;
-				});
+				public constructor(implementation: { executeBadge(param0: globalAndroid.content.Context, param1: globalAndroid.content.ComponentName, param2: number): void; getSupportLaunchers(): java.util.List<string> });
 				public constructor();
 				public executeBadge(param0: globalAndroid.content.Context, param1: globalAndroid.content.ComponentName, param2: number): void;
 				public getSupportLaunchers(): java.util.List<string>;
@@ -166,8 +163,7 @@ declare module me {
 					/**
 					 * Constructs a new instance of the me.leolin.shortcutbadger.impl.IntentConstants interface with the provided implementation. An empty constructor exists calling super() when extending the interface class.
 					 */
-					public constructor(implementation: {
-					});
+					public constructor(implementation: {});
 					public constructor();
 					public static DEFAULT_OREO_INTENT_ACTION: string;
 					public static DEFAULT_INTENT_ACTION: string;
@@ -368,4 +364,3 @@ declare module me {
 }
 
 //Generics information:
-

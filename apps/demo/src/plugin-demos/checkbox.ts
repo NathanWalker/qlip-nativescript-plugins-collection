@@ -1,6 +1,6 @@
 import { Observable, EventData, Page } from '@nativescript/core';
 import { DemoSharedCheckbox } from '@demo/shared';
-import {} from '@qlip/checkbox';
+import {} from '@qlip/nativescript-checkbox';
 
 export function navigatingTo(args: EventData) {
 	const page = <Page>args.object;
